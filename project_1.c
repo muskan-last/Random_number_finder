@@ -3,13 +3,13 @@
 #include<time.h>
 #include<math.h>
 
-int main(){
-       int random_number;
+int random_number_generator(){
+    int random_number;
        int guessing_number;
        int number_of_guess=0;
        srand(time(NULL));
     printf("WEILCOME TO THE WORLD OF NUMBER GUESSING GAME \n");
-    random_number= rand() % guessing_number ; // generating random number between 1 to 100
+    random_number= rand() % 100 +1 ; // generating random number between 1 to 100
 
     do {
         printf("\n please enter your guess number between (1 - 100): ");
@@ -26,8 +26,12 @@ int main(){
         }
 
     }while(guessing_number!=random_number);
-    printf("\n Thanks for Playing.");
+    printf("\n\nThanks for Playing.");
     printf("\n  Created by MUskan");
-    
+}
+
+int main(){
+      
+    random_number_generator();
     return 0;
 }
