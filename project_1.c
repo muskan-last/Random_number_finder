@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<math.h>
 
 int main(){
        int random_number;
@@ -8,7 +9,7 @@ int main(){
        int number_of_guess=0;
        srand(time(NULL));
     printf("WEILCOME TO THE WORLD OF NUMBER GUESSING GAME \n");
-    random_number=rand() * 100 + 1 ; // generating random number between 1 to 100
+    random_number= rand() % guessing_number ; // generating random number between 1 to 100
 
     do {
         printf("\n please enter your guess number between (1 - 100): ");
@@ -24,7 +25,7 @@ int main(){
             printf(" CONGRATULATIONS ! you have succesfully guessed the number in %d attempts ",number_of_guess);
         }
 
-    }while(guessing_number != random_number);
+    }while(guessing_number!=random_number);
     printf("\n Thanks for Playing.");
     printf("\n  Created by MUskan");
     
